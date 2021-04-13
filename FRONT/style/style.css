@@ -1,0 +1,26 @@
+:root {
+    --blanc: #ffffff;
+    --noir: #000000;
+
+    --couleur--fond: #faf7f7;
+
+    --couleur-classique--1: #2f6fc4;
+    --couleur-classique--2: #ff914d;
+    --couleur-classique-3: #6fc24b;
+
+    --couleur-dark--1: #043474;
+    --couleur-dark--2: #5994e1;
+}
+
+
+
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    color: var(--couleur--fond);
+}
+
+title {
+    font-family: 'Nerko One', cursive;
+}
+
