@@ -13,14 +13,42 @@
 }
 
 
-
-
-body {
+#formulaire_connexion {
     font-family: 'Patrick Hand', cursive;
-    color: var(--couleur--fond);
+    font-size: 1.5em;
 }
 
-title {
+.titre {
     font-family: 'Nerko One', cursive;
+    font-size: 7em;
+    color: var(--blanc);
+}
+
+.fond_bleu {
+    background-color: var(--couleur-classique--1);
+    height: 600px;
+}
+
+.fond_orange {
+    background-color: var(--couleur-classique--2);
+}
+
+.sol {
+    background-color: var(--couleur-classique-3);
+    height: 35px;
+}
+
+.btn-light {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#formulaire_connexion {
+    padding-top: 60px;
+}
+
+.fond_formulaire {
+    background-color: var(--couleur-classique--2);
+    border-radius: 15px;
 }
 
