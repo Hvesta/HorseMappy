@@ -24,9 +24,17 @@
     color: var(--blanc);
 }
 
-.fond_bleu {
+.fond-bleu {
     background-color: var(--couleur-classique--1);
-    height: 600px;
+}
+
+#image-accueil{
+
+}
+
+#container-image-accueil {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .fond_orange {
@@ -35,7 +43,7 @@
 
 .sol {
     background-color: var(--couleur-classique-3);
-    height: 35px;
+    height: 30px;
 }
 
 .btn-light {
@@ -50,5 +58,17 @@
 .fond_formulaire {
     background-color: var(--couleur-classique--2);
     border-radius: 15px;
+}
+
+.arbres {
+    height: 30vh;
+}
+
+.arbre {
+    height: 23vh;
+}
+
+.pointeur {
+    height: 7vh;
 }
 
