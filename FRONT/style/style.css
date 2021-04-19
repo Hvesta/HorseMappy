@@ -12,6 +12,10 @@
     --couleur-dark--2: #5994e1;
 }
 
+.page-connexion {
+    opacity: 100;
+    transition: all 1s;
+}
 
 #formulaire_connexion {
     font-family: 'Patrick Hand', cursive;
@@ -71,4 +75,12 @@
 .pointeur {
     height: 7vh;
 }
+
+
+
+
+
+
+
+
 
