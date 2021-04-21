@@ -15,6 +15,9 @@ const fondFormulaire = document.querySelector('.fond-formulaire');
 const iconeMode = document.getElementById("icone-mode");
 const iconeMail = document.getElementById("icone-mail");
 const iconeMdp = document.getElementById("icone-mdp");
+const arbres = document.querySelector(".arbres");
+const arbre = document.querySelector(".arbre");
+const pointeur = document.querySelector(".pointeur");
 
 
 ///////////////////////
@@ -28,16 +31,22 @@ const modeJour = function() {
     iconeMode.setAttribute("src", "images/sun.png");
     iconeMail.setAttribute("src", "images/mail.png");
     iconeMdp.setAttribute("src", "images/mot-de-passe.png");
+    arbres.setAttribute("src", "images/trees-bird.svg");
+    arbre.setAttribute("src", "images/tree.svg");
+    pointeur.setAttribute("src", "images/location-pointer.svg");
 }
 
 const modeDark = function() {
     fondBleu.style.backgroundColor = '#043474';
-    fondVert.style.backgroundColor = '#5994e1';
+    fondVert.style.backgroundColor = '#480ABB';
     fondFormulaire.style.backgroundColor = '#5994e1';
-    titreAppli.style.color = '#ffffff';
+    titreAppli.style.color = '#5994e1';
     iconeMode.setAttribute("src", "images/lune.png");
     iconeMail.setAttribute("src", "images/mail-blanc.png");
     iconeMdp.setAttribute("src", "images/mot-de-passe-blanc.png");
+    arbres.setAttribute("src", "images/trees-owl-blanc.svg");
+    arbre.setAttribute("src", "images/tree-blanc.svg");
+    pointeur.setAttribute("src", "images/location-pointer-blanc.svg");
 }
 
 const toggleScreenMode = () => {
