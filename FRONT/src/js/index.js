@@ -1,13 +1,9 @@
-import _ from 'lodash';
+import {vueConnexion} from './vues/vue-connexion';
+import {attacherElementsEtEvenementsConnexion} from './connexion';
+import {attacherElementsEtEvenementsMode} from "../../js/choixMode";
 
-function component() {
-    const element = document.createElement('div');
+const racine = document.getElementById('racine');
 
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-    return element;
-}
-
-document.body.appendChild(component());
-console.warn("AFTER appendChild")
+racine.innerHTML = vueConnexion;
+attacherElementsEtEvenementsConnexion();
+attacherElementsEtEvenementsMode();
