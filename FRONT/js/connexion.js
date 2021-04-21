@@ -32,17 +32,16 @@ const utilisateur3 = {
 
 const utilisateurs = [utilisateur1, utilisateur2, utilisateur3];
 
-
 ///////////////////////
 // Elements
 
 //Boutons
 const btnLogin = document.querySelector('.btn-light');
+const btnMode = document.querySelector('.form-check-input');
 
 // Champs formulaires
 const inputLoginMail = document.querySelector('.input-adresse-mail');
 const inputMotDePasse = document.querySelector('.input-mot-de-passe');
-
 
 // Page connexion
 const pageConnexion = document.querySelector('.page-connexion');
@@ -63,3 +62,8 @@ btnLogin.addEventListener('click', function (e) {
     }
 
 })
+
+
+
+
+
