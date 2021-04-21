@@ -38,7 +38,7 @@ const modeJour = function() {
 
 const modeDark = function() {
     fondBleu.style.backgroundColor = '#043474';
-    fondVert.style.backgroundColor = '#480ABB';
+    fondVert.style.backgroundColor = '#3C069F';
     fondFormulaire.style.backgroundColor = '#5994e1';
     titreAppli.style.color = '#5994e1';
     iconeMode.setAttribute("src", "images/lune.png");

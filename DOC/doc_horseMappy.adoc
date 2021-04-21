@@ -41,6 +41,7 @@ image::images/horseMappy.jpg[]
 *** Mode "dark" : +
     - Bleu nuit : #043474
     - Bleu clair : #5994E1
+    - Violet foncé : #3C069F
     - Fond gris : #FAF7F7
     - Blanc et Noir
 
