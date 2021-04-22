@@ -6,7 +6,7 @@ export const vueConnexion =`
             <div class="d-flex flex-row-reverse" id="row-checkbox">
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                    <label class="form-check-label" for="flexSwitchCheckDefault"><img id="icone-mode" src ="images/sun.png"></label>
+                    <label class="form-check-label" for="flexSwitchCheckDefault"><img id="icone-mode" src ="images/sun.svg"></label>
                 </div>
             </div>
             <div class="row" id="row-titre">

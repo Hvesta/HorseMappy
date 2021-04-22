@@ -2,7 +2,7 @@
     --blanc: #ffffff;
     --noir: #000000;
 
-    --couleur--fond: #faf7f7;
+    --couleur--fond: #D3D5D9;
 
     --couleur-classique--1: #2f6fc4;
     --couleur-classique--2: #ff914d;
@@ -12,9 +12,13 @@
     --couleur-dark--2: #5994e1;
 }
 
+body {
+    background-color: var( --couleur--fond);
+}
+
 #formulaire_connexion {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 1.5em;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
 }
 
 .titre {
@@ -32,14 +36,24 @@
     padding-left: 0;
 }
 
+#row-checkbox {
+    padding-top: 2vh;
+    padding-right: 2.5vh;
+}
+
 .sol {
     background-color: var(--couleur-classique-3);
     height: 7vh;
 }
 
+.input-adresse-mail, .input-mot-de-passe {
+    box-shadow: 1px 1px 1px #50555F;
+}
+
 .btn-light {
     margin-top: 20px;
     margin-bottom: 20px;
+    box-shadow: 2px 2px 2px #50555F;
 }
 
 #formulaire_connexion {
@@ -50,6 +64,7 @@
 .fond-formulaire {
     background-color: var(--couleur-classique--2);
     border-radius: 15px;
+    box-shadow: 5px 5px 5px #B9B5C2;
 }
 
 .arbres {
@@ -68,6 +83,62 @@
     background-color: white;
     border-color: white
 }
+
+/* Style interface utilisateur */
+
+.interface-utilisateur {
+    background-color: var(--couleur-classique--1);
+}
+
+#menu {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.logo {
+    height: 10vh;
+}
+
+.piaf {
+    height: 6vh;
+
+}
+
+.separation {
+    background-color: var(--couleur-classique--2);
+    height: 3vh;
+}
+
+.sol-inter {
+    background-color: var(--couleur-classique-3);
+    height: 1.5vh;
+}
+
+#icone-mode {
+    height: 3vh;
+    padding-right: 2.5vh;
+}
+
+#container-reglages {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#param {
+    padding-top: 3vh;
+}
+
+#mode-inter {
+    padding-bottom: 6vh;
+    padding-left: 2.5vh;
+}
+
+#logo-inter {
+    padding-left: 4vh;
+    padding-top: 1.5vh;
+}
+
+
 
 
 

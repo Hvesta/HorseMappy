@@ -30,7 +30,7 @@ const attacherElementsEtEvenementsMode = () => {
         fondVert.style.backgroundColor = '#6fc24b';
         fondFormulaire.style.backgroundColor = '#ff914d';
         titreAppli.style.color = '#ff914d';
-        iconeMode.setAttribute("src", "images/sun.png");
+        iconeMode.setAttribute("src", "images/sun.svg");
         iconeMail.setAttribute("src", "images/mail.png");
         iconeMdp.setAttribute("src", "images/mot-de-passe.png");
         arbres.setAttribute("src", "images/trees-bird.svg");
@@ -43,7 +43,7 @@ const attacherElementsEtEvenementsMode = () => {
         fondVert.style.backgroundColor = '#3C069F';
         fondFormulaire.style.backgroundColor = '#5994e1';
         titreAppli.style.color = '#5994e1';
-        iconeMode.setAttribute("src", "images/lune.png");
+        iconeMode.setAttribute("src", "images/moon-blanc.svg");
         iconeMail.setAttribute("src", "images/mail-blanc.png");
         iconeMdp.setAttribute("src", "images/mot-de-passe-blanc.png");
         arbres.setAttribute("src", "images/trees-owl-blanc.svg");
