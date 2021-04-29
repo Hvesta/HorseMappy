@@ -1,7 +1,7 @@
 export const vueInterfaceUtilisateur = `
 
 <!-- Interface utilisateur -->
-
+    <!--
     <div class="interface-utilisateur">
         <div class="container-fluid" id="menu">
             <section id="parametres">
@@ -31,9 +31,9 @@ export const vueInterfaceUtilisateur = `
                     </div>   
             </section>
         </div>
-        
+        -->
         <!-- Séparation -->
-        
+       
         <section id="herbe>
                 <div class="row">
                     <div class="sol-inter"></div>
@@ -41,70 +41,104 @@ export const vueInterfaceUtilisateur = `
         </section>
         
         <!-- Séparation -->
+        
         <section id="separation">
                 <div class="row">
                     <div class="separation"></div>
                 </div>
         </section>
         
+        <div class="sidebar">
+
+          <ul class="workouts">
+            <form class="form hidden">
+              <div class="form__row">
+                <label class="form__label">Type</label>
+                <select class="form__input form__input--type">
+                  <option value="running">Running</option>
+                  <option value="cycling">Cycling</option>
+                </select>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Distance</label>
+                <input class="form__input form__input--distance" placeholder="km" />
+              </div>
+              <div class="form__row">
+                <label class="form__label">Duration</label>
+                <input
+                  class="form__input form__input--duration"
+                  placeholder="min"
+                />
+              </div>
+              <div class="form__row">
+                <label class="form__label">Cadence</label>
+                <input
+                  class="form__input form__input--cadence"
+                  placeholder="step/min"
+                />
+              </div>
+              <div class="form__row form__row--hidden">
+                <label class="form__label">Elev Gain</label>
+                <input
+                  class="form__input form__input--elevation"
+                  placeholder="meters"
+                />
+              </div>
+              <button class="form__btn">OK</button>
+            </form>
+            <li class="workout workout--running" data-id="1234567890">
+          <h2 class="workout__title">Running on April 14</h2>
+          <div class="workout__details">
+            <span class="workout__icon">🏃‍♂️</span>
+            <span class="workout__value">5.2</span>
+            <span class="workout__unit">km</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">⏱</span>
+            <span class="workout__value">24</span>
+            <span class="workout__unit">min</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">⚡️</span>
+            <span class="workout__value">4.6</span>
+            <span class="workout__unit">min/km</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">🦶🏼</span>
+            <span class="workout__value">178</span>
+            <span class="workout__unit">spm</span>
+          </div>
+        </li>
+
+        <li class="workout workout--cycling" data-id="1234567891">
+          <h2 class="workout__title">Cycling on April 5</h2>
+          <div class="workout__details">
+            <span class="workout__icon">🚴‍♀️</span>
+            <span class="workout__value">27</span>
+            <span class="workout__unit">km</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">⏱</span>
+            <span class="workout__value">95</span>
+            <span class="workout__unit">min</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">⚡️</span>
+            <span class="workout__value">16</span>
+            <span class="workout__unit">km/h</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">⛰</span>
+            <span class="workout__value">223</span>
+            <span class="workout__unit">m</span>
+          </div>
+        </li>
+          </ul>
+        </div>  
+    </div>
+
+    <div id="map"></div>
         <!-- Affichage parcours -->
-        <div class="container-fluid" id="container-reglages">
-            <section>
-                <div class="d-flex flex-row-reverse cols-12">
-                    <div class="col-1" id="param">
-                          <img class="parametres" src="images/engrenage.png">  
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="container-fluid" id="parcours">    
-            <div class="row cols-6">
-                <ul class="workouts">
-                    <form class="form hidden">
-                      <div class="form__row">
-                        <label class="form__label">Type</label>
-                        <select class="form__input form__input--type">
-                          <option value="running">Trot</option>
-                          <option value="cycling">Galop</option>
-                          <option value="cycling">Pas</option>
-                        </select>
-                      </div>
-                      <div class="form__row">
-                        <label class="form__label">Distance</label>
-                        <input class="form__input form__input--distance" placeholder="km" />
-                      </div>
-                      <div class="form__row">
-                        <label class="form__label">Duration</label>
-                        <input
-                          class="form__input form__input--duration"
-                          placeholder="min"
-                        />
-                      </div>
-            
-                      <div class="form__row">
-                        <label class="form__label">Cadence</label>
-                        <input
-                          class="form__input form__input--cadence"
-                          placeholder="step/min"
-                        />
-                      </div>
-                      <div class="form__row form__row--hidden">
-                        <label class="form__label">Elev Gain</label>
-                        <input
-                          class="form__input form__input--elevation"
-                          placeholder="meters"
-                        />
-                      </div>
-                      <button class="form__btn">OK</button>
-                    </form>
-               </ul> 
-            </div>
-        </div>    
-            
-            <!-- Affichage carte -->
-            <div class="row cols-6">
-                <div id="map"></div>
-            </div>
         
         </div>
 `;
