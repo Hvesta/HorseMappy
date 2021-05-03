@@ -177,11 +177,6 @@ body {
     flex-direction: column;
 }
 
-.logo {
-    height: 5.2rem;
-    align-self: center;
-    margin-bottom: 4rem;
-}
 
 .workouts {
     list-style: none;
@@ -326,18 +321,19 @@ body {
 
 .engrenage{
     height: 4vh;
-    margin-top: 5vh;
+    margin-top: 12.5vh;
     margin-bottom: 2vh;
-    margin-left: 3vh;
+    margin-left: 2.3vh;
 }
 
 .logo {
     height: 9vh;
+    align-self: center;
 }
 
 .fleche {
     height: 5vh;
-    margin-top: 0vh;
+    align-self: center;
 }
 
 #flexSwitchCheckDefault {
@@ -349,13 +345,12 @@ body {
 
 #icone-mode-inter {
     height: 3vh;
-    margin-left: 3.5vh;
+    margin-left: 2.9vh;
     margin-top: 1vh;
 }
 
 .oiseau {
     height: 7vh;
-    padding-bottom: 0;
 }
 
 

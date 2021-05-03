@@ -1,7 +1,9 @@
 'use strict';
 
-const attacherElementsEtEvenementsMode = () => {
-    ///////////////////////
+const attacherElementsEtEvenementsModeConnexion = () => {
+///////////////////////////
+// Elements
+
 // Bouton
     const btnMode = document.querySelector('.form-check-input');
 
@@ -52,7 +54,6 @@ const attacherElementsEtEvenementsMode = () => {
     }
 
     const toggleScreenMode = () => {
-        console.log(btnMode);
         if (btnMode.checked){
             modeDark();
         } else {
@@ -66,4 +67,4 @@ const attacherElementsEtEvenementsMode = () => {
     btnMode.addEventListener('change', toggleScreenMode);
 }
 
-export {attacherElementsEtEvenementsMode};
+export {attacherElementsEtEvenementsModeConnexion};
