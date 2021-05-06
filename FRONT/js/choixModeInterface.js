@@ -1,4 +1,5 @@
 'use strict';
+import {chargementDeLaCarte} from "../src/js/interface";
 
 const attacherElementsEtEvenementsModeInterface = () => {
 
@@ -40,6 +41,8 @@ const param = document.querySelector('.engrenage');
      oiseau.setAttribute("src", "./src/images/owl-inter.svg");
      iconeMode.setAttribute("src", "./src/images/moon-blanc.svg");
      param.setAttribute("src", "./src/images/engrenage-blanc.svg");
+     let carteCustom = 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png';
+     chargementDeLaCarte();
 
 
  };

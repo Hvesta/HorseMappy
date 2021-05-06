@@ -1,0 +1,111 @@
+:root {
+    --blanc: #ffffff;
+    --noir: #000000;
+
+    --couleur--fond: #D3D5D9;
+
+    --couleur-classique--1: #2f6fc4;
+    --couleur-classique--2: #ff914d;
+    --couleur-classique-3: #6fc24b;
+
+    --couleur-dark--1: #043474;
+    --couleur-dark--2: #5994e1;
+
+    --color-light--1: #aaa;
+    --color-light--3: rgb(214, 222, 224);
+    --color-dark--1: #2d3439;
+    --color-dark--2: #42484d;
+    --color-brand--1: #ffb545;
+    --color-brand--2: #00c46a;
+
+}
+
+
+#formulaire_connexion {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+}
+
+.titre {
+    font-family: 'Nerko One', cursive;
+    font-size: 7em;
+    color: var(--couleur-classique--2);
+}
+
+.fond-bleu {
+    background-color: var(--couleur-classique--1);
+}
+
+#container-image-accueil {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#row-checkbox {
+    padding-top: 2vh;
+    padding-right: 2.5vh;
+}
+
+.sol {
+    background-color: var(--couleur-classique-3);
+    height: 7vh;
+}
+
+.input-adresse-mail, .input-mot-de-passe {
+    box-shadow: 1px 1px 1px #50555F;
+}
+
+.btn-light {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px #50555F;
+}
+
+#formulaire_connexion {
+    padding-top: 90px;
+    padding-bottom: 140px;
+}
+
+.fond-formulaire {
+    background-color: var(--couleur-classique--2);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #B9B5C2;
+}
+
+.arbres {
+    height: 32vh;
+}
+
+.arbre {
+    height: 26vh;
+}
+
+.pointeur {
+    height: 7vh;
+}
+
+.form-check-input {
+    background-color: white;
+    border-color: white
+}
+
+#icone-mode {
+    height: 3vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

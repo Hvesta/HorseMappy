@@ -14,9 +14,18 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: "**/style.css",
+                    from: "**/style-connexion.css",
                     context: 'src/style',
-                    to: path.resolve(__dirname, 'dist') + '/style/style.css' },
+                    to: path.resolve(__dirname, 'dist') + '/style/style-connexion.css' },
+            ],
+        }),
+
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: "**/style-interface.css",
+                    context: 'src/style',
+                    to: path.resolve(__dirname, 'dist') + '/style/style-interface.css' },
             ],
         }),
         new CopyPlugin({

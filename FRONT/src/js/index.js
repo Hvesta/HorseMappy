@@ -10,6 +10,7 @@ import {attacherElementsEtEvenementsModeConnexion} from "../../js/choixModeConne
 import {attacherElementsEtEvenementsConnexion} from "./connexion";
 import {vueModalePostConnexionOk} from './vues/vue-modale-post-connexion-ok';
 import {vueModalePostConnexionKo} from "./vues/vue-modale-post-connexion-ko";
+import {Carte} from "./modeles/Carte";
 
 const racineContenu = document.getElementById('racine_contenu');
 const racineModales = document.getElementById('racine_modales');
@@ -22,10 +23,11 @@ const chargerDOMModaleConnexionOk = () => {
 const afficherInterfaceUtilisateur = () => {
     const cssLink = document.getElementById('active-css');
     if(cssLink && cssLink.href){
-        cssLink.href = 'style/style.css';
+        cssLink.href = 'style/style-interface.css';
     }
     racineContenu.innerHTML = vueInterfaceUtilisateur;
-    chargementDeLaCarte();
+    const carte = new Carte('normal');
+    carte.afficher();
     attacherElementsEtEvenementsModeInterface();
 };
 
@@ -33,7 +35,7 @@ const afficherInterfaceUtilisateur = () => {
 const chargerCssConnexion = () => {
     const cssLink = document.getElementById('active-css');
     if(cssLink && cssLink.href){
-        cssLink.href = 'style/style.css';
+        cssLink.href = 'style/style-connexion.css';
     }
 };
 
@@ -51,5 +53,5 @@ const afficherVueConnexion = () => {
 
 };
 
-afficherVueConnexion();
-// afficherInterfaceUtilisateur();
+// afficherVueConnexion();
+afficherInterfaceUtilisateur();

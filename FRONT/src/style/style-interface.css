@@ -40,78 +40,8 @@ body {
     line-height: 1.6;
     height: 100vh;
     overscroll-behavior-y: none;
-
     padding: 3rem;
-
     display: flex;
-}
-
-#formulaire_connexion {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2em;
-}
-
-.titre {
-    font-family: 'Nerko One', cursive;
-    font-size: 7em;
-    color: var(--couleur-classique--2);
-}
-
-.fond-bleu {
-    background-color: var(--couleur-classique--1);
-}
-
-#container-image-accueil {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-#row-checkbox {
-    padding-top: 2vh;
-    padding-right: 2.5vh;
-}
-
-.sol {
-    background-color: var(--couleur-classique-3);
-    height: 7vh;
-}
-
-.input-adresse-mail, .input-mot-de-passe {
-    box-shadow: 1px 1px 1px #50555F;
-}
-
-.btn-light {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 2px #50555F;
-}
-
-#formulaire_connexion {
-    padding-top: 90px;
-    padding-bottom: 140px;
-}
-
-.fond-formulaire {
-    background-color: var(--couleur-classique--2);
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px #B9B5C2;
-}
-
-.arbres {
-    height: 32vh;
-}
-
-.arbre {
-    height: 26vh;
-}
-
-.pointeur {
-    height: 7vh;
-}
-
-.form-check-input {
-    background-color: white;
-    border-color: white
 }
 
 /* Style interface utilisateur */
@@ -125,34 +55,6 @@ body {
     padding-left: 0;
 }
 
-.logo {
-    height: 10vh;
-}
-
-.piaf {
-    height: 6vh;
-
-}
-
-.separation {
-    background-color: var(--couleur-classique--2);
-    height: 3vh;
-}
-
-.sol-inter {
-    background-color: var(--couleur-classique-3);
-    height: 1.5vh;
-}
-
-#icone-mode {
-    height: 3vh;
-    padding-right: 2.5vh;
-}
-
-#container-reglages {
-    padding-right: 0;
-    padding-left: 0;
-}
 
 #param {
     padding-top: 3vh;
@@ -295,12 +197,6 @@ body {
     display: none;
 }
 
-.copyright {
-    margin-top: auto;
-    font-size: 1.3rem;
-    text-align: center;
-    color: var(--color-light--1);
-}
 
 /* MAP */
 #map {
@@ -314,9 +210,8 @@ body {
     width: 8vh;
 }
 
-#racine {
-    display: flex;
-    width: 100%;
+#racine_contenu {
+    display: contents;
 }
 
 .engrenage{
@@ -352,16 +247,3 @@ body {
 .oiseau {
     height: 7vh;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

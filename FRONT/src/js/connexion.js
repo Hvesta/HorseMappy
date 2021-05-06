@@ -7,7 +7,7 @@ const attacherElementsEtEvenementsConnexion = () => {
 
 ///////////////////////
 // Elements
-    
+
 //Boutons
     const btnLogin = document.querySelector('.btn-light');
     const btnFermetureModaleKo = document.querySelector('.btn-close');
@@ -15,9 +15,6 @@ const attacherElementsEtEvenementsConnexion = () => {
 // Champs formulaires
     const inputLoginMail = document.querySelector('.input-adresse-mail');
     const inputMotDePasse = document.querySelector('.input-mot-de-passe');
-
-// Page connexion
-    const pageConnexion = document.querySelector('.page-connexion');
 
 // Modales
     const modaleConnexionOKElement = document.getElementById('modale-connexion-ok');
@@ -53,7 +50,6 @@ const attacherElementsEtEvenementsConnexion = () => {
         utilisateurEnCours = utilisateurs.find(uti => uti.mail === inputLoginMail.value);
         if (utilisateurEnCours?.pin === Number(inputMotDePasse.value)) {
             affichageModaleConnexionOk();
-            body.style.opacity = 0.33;
         }
         else {
             affichageModaleConnexionKo();

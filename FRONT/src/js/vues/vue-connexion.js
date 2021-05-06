@@ -16,7 +16,7 @@ export const vueConnexion =`
             </div>
             <div class="row align-items-end" id="row-icones">
                 <div class="col-sm-3">
-                    <img class="arbres" src="images/trees.svg">
+                    <img class="arbres" src="images/trees-bird.svg">
                 </div>
                 <div class="col-sm-6">
                     <img class="arbre" src="images/tree.svg">
