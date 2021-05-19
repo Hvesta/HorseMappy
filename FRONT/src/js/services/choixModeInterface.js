@@ -1,5 +1,6 @@
 'use strict';
-import {chargementDeLaCarte} from "../src/js/interface";
+
+import {Carte} from "../modeles/Carte";
 
 const attacherElementsEtEvenementsModeInterface = () => {
 
@@ -29,7 +30,8 @@ const param = document.querySelector('.engrenage');
      oiseau.setAttribute("src", "./src/images/bird-inter.svg");
      iconeMode.setAttribute("src", "./src/images/sun.svg");
      param.setAttribute("src", "./src/images/engrenage.svg");
-
+     const carte = new Carte('normal');
+     carte.afficher();
 
  };
 
@@ -41,10 +43,9 @@ const param = document.querySelector('.engrenage');
      oiseau.setAttribute("src", "./src/images/owl-inter.svg");
      iconeMode.setAttribute("src", "./src/images/moon-blanc.svg");
      param.setAttribute("src", "./src/images/engrenage-blanc.svg");
-     let carteCustom = 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png';
-     chargementDeLaCarte();
 
-
+     const carte = new Carte('dark');
+     carte.afficher();
  };
 
 

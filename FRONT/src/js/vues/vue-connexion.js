@@ -18,11 +18,17 @@ export const vueConnexion =`
                 <div class="col-sm-3">
                     <img class="arbres" src="images/trees-bird.svg">
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-3">
                     <img class="arbre" src="images/tree.svg">
+                </div>
+                <div class="col-sm-1">
+                    <img class="logo" src="images/logo.svg">
                 </div>
                 <div class="col-sm-3">
                     <img class="pointeur" src="images/location-pointer.svg">
+                </div>
+                <div class="col-sm-2">
+                    <img class="danger" src="images/danger.svg">
                 </div>
             </div>
         </section>

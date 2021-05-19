@@ -81,6 +81,14 @@
 }
 
 .pointeur {
+    height:7vh;
+}
+
+.logo {
+    height: 15vh;
+}
+
+.danger {
     height: 7vh;
 }
 
