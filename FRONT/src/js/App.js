@@ -1,5 +1,5 @@
-import {ConnexionController} from "./controllers/ConnexionController";
-import {TableauDeBordController} from "./controllers/TableauDeBordController";
+import {ConnexionController} from "./controllers/connexion/ConnexionController";
+import {TableauDeBordController} from "./controllers/tableauDeBord/TableauDeBordController";
 import {CustomEventService} from "./services/CustomEventService";
 
 const App = function (){
