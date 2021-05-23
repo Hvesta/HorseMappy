@@ -7,6 +7,7 @@ const racineContenu = document.getElementById('racine_contenu');
 
 function TableauDeBordController() {
     const elements = {};
+    let carte;
 
     const chargerReferencesDOM = function() {
         // Elements
@@ -22,6 +23,7 @@ function TableauDeBordController() {
         elements.oiseau = document.querySelector('.oiseau');
         elements.param = document.querySelector('.engrenage');
         elements.iconeMode = document.getElementById('icone-mode-inter');
+        elements.logo = document.querySelector('.logo');
 
     }
 
@@ -38,7 +40,7 @@ function TableauDeBordController() {
 
     const chargerCarte = function() {
         let mode = 'normal';
-        const carte = new Carte(mode);
+        carte = new Carte(mode);
         carte.afficher();
     }
 
@@ -47,8 +49,9 @@ function TableauDeBordController() {
         chargerDOM();
         chargerReferencesDOM();
         chargerCarte();
-        attacherEvenementsModeInterface(elements);
+        attacherEvenementsModeInterface(elements, carte);
         animerElement(elements.oiseau, 'slideInUp');
+        animerElement(elements.logo, 'bounceIn');
     }
 }
 

@@ -12,7 +12,7 @@ export const vueInterfaceUtilisateur = `
     <img src="../images/engrenage.svg" alt="Paramètres" class="engrenage" />
 </div>
 <div class="sidebar">
-      <img src="../images/logo-temp.svg" alt="Logo" class="logo" />
+      <img src="../images/logo.svg" alt="Logo" class="logo" />
       <img src="../images/fleche.svg" alt="Fleche-choix" class="fleche" />
 
       <ul class="workouts">

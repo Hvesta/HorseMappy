@@ -222,8 +222,8 @@ body {
 }
 
 .logo {
-    height: 9vh;
-    align-self: center;
+    height: 15vh;
+    margin-right: 5vh;
 }
 
 .fleche {

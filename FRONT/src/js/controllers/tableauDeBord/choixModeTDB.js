@@ -3,7 +3,7 @@
 import {Carte} from "../../modeles/Carte";
 import {animerElement} from "../../services/animationService";
 
-const attacherEvenementsModeInterface = (elements) => {
+const attacherEvenementsModeInterface = (elements, carte) => {
 // Changement d'état mode "dark"
     const modeJour = () => {
         elements.sidebarOptions.style.backgroundColor = '#ff914d';
@@ -13,9 +13,7 @@ const attacherEvenementsModeInterface = (elements) => {
         elements.iconeMode.setAttribute("src", "../src/images/sun.svg");
         elements.param.setAttribute("src", "../src/images/engrenage.svg");
 
-        const carte = new Carte('normal');
-        carte.afficher();
-
+        carte.changerMode('normal');
     };
 
 
@@ -26,9 +24,8 @@ const attacherEvenementsModeInterface = (elements) => {
         elements.oiseau.setAttribute("src", "../src/images/owl-inter.svg");
         elements.iconeMode.setAttribute("src", "../src/images/moon-blanc.svg");
         elements.param.setAttribute("src", "../src/images/engrenage-blanc.svg");
-
-        const carte = new Carte('dark');
-        carte.afficher();
+        
+        carte.changerMode('dark');
     };
 
 
@@ -39,6 +36,7 @@ const attacherEvenementsModeInterface = (elements) => {
             modeJour();
         }
         animerElement(elements.oiseau, 'slideInUp');
+        animerElement(elements.logo, 'bounceIn');
     };
 
     ///////////////////////

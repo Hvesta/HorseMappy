@@ -28,7 +28,6 @@ function Carte (mode) {
         let map = L.map('map').setView(coords, niveauZoomCarte);
         console.log(this.url);
 
-
         this.tuiles = L.tileLayer(this.url, {
             attribution: this.attribution
         }).addTo(map);

@@ -16,6 +16,7 @@ const attacherEvenementsModeConnexion = (elements) => {
         elements.arbre.setAttribute("src", "images/tree.svg");
         elements.pointeur.setAttribute("src", "images/location-pointer.svg");
         elements.logo.setAttribute("src", "images/logo.svg");
+        elements.danger.setAttribute("src", "images/danger.svg");
     }
 
     const basculerModeDark = function() {
@@ -29,6 +30,8 @@ const attacherEvenementsModeConnexion = (elements) => {
         elements.arbres.setAttribute("src", "images/trees-owl-blanc.svg");
         elements.arbre.setAttribute("src", "images/tree-blanc.svg");
         elements.pointeur.setAttribute("src", "images/location-pointer-blanc.svg");
+        elements.logo.setAttribute("src", "images/logo-blanc.svg");
+        elements.danger.setAttribute("src", "images/danger-blanc.svg");
     }
 
     const toggleMode = () => {
