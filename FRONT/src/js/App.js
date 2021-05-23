@@ -35,7 +35,6 @@ const App = function (){
         controller.afficherVue();
 
         CustomEventService.inscrireEvenement('chargerPageTableauDeBord', function (data) {
-            console.log("Dans chargerPageTableauDeBord()", data);
             chargerPage(pages.TABLEAU_DE_BORD);
         });
     }

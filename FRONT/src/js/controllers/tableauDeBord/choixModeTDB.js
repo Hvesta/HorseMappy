@@ -24,7 +24,7 @@ const attacherEvenementsModeInterface = (elements, carte) => {
         elements.oiseau.setAttribute("src", "../src/images/owl-inter.svg");
         elements.iconeMode.setAttribute("src", "../src/images/moon-blanc.svg");
         elements.param.setAttribute("src", "../src/images/engrenage-blanc.svg");
-        
+
         carte.changerMode('dark');
     };
 
