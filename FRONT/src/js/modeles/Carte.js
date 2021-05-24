@@ -52,20 +52,25 @@ function Carte (mode) {
         this.attribution = modesMapping[mode].attribution;
     }
 
-    this.afficher = function () {
+    const afficher = function () {
         if (!this.error) {
             // viderEmplacementCarte();
             recuperationPosition();
         }
     }
 
-    this.changerMode = function (mode) {
+    const changerMode = function (mode) {
         if (modeCarteExiste(mode)){
             this.url = modesMapping[mode].url;
             this.attribution = modesMapping[mode].attribution;
             this.tuiles.setUrl(this.url);
         }
     };
+
+    return {
+        afficher: afficher,
+        changerMode: changerMode
+    }
 }
 
 export {Carte};

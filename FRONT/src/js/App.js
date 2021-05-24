@@ -1,6 +1,6 @@
 import {ConnexionController} from "./controllers/connexion/ConnexionController";
 import {TableauDeBordController} from "./controllers/tableauDeBord/TableauDeBordController";
-import {CustomEventService} from "./services/CustomEventService";
+import {CustomEventService} from "./services/customEventService";
 
 const App = function (){
 
@@ -18,9 +18,9 @@ const App = function (){
     let pageCourante;
     let controller;
 
-    const chargerPage = function (page){
+    const chargerPage = function (nomPage){
 
-        switch (page) {
+        switch (nomPage) {
             case pages.CONNEXION:
                 controller = new ConnexionController();
                 pageCourante = pages.CONNEXION;
@@ -30,7 +30,7 @@ const App = function (){
                 pageCourante = pages.TABLEAU_DE_BORD;
                 break;
             default:
-                throw new Error(`Page "${page}" inconnue`);
+                throw new Error(`Page "${nomPage}" inconnue`);
         }
         controller.afficherVue();
 

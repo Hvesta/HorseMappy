@@ -3,14 +3,14 @@ import {animerElement} from "../../services/animationService";
 import {vueConnexion} from "../../vues/vue-connexion";
 import {vueModalePostConnexionOk} from "../../vues/vue-modale-post-connexion-ok";
 import {vueModalePostConnexionKo} from "../../vues/vue-modale-post-connexion-ko";
-import {utilisateurs} from '../../services/PersistenceService';
-import {CustomEventService} from "../../services/CustomEventService";
+import {utilisateurs} from '../../services/persistenceService';
+import {CustomEventService} from "../../services/customEventService";
 import {attacherEvenementsModeConnexion} from "./choixModeConnexion";
 
 const racineContenu = document.getElementById('racine_contenu');
 const racineModales = document.getElementById('racine_modales');
 
-function ConnexionController() {
+function ConnexionController(callbackChargerPage) {
     const elements = {};
 
     const chargerReferencesDOM = function () {
@@ -76,14 +76,17 @@ function ConnexionController() {
 
         const affichageModaleConnexionOk = () => {
             const myModalOk = new bootstrap.Modal(modaleConnexionOKElement);
+
             document.getElementById('nomUtilisateur').textContent = utilisateurEnCours.nom;
+
             modaleConnexionOKElement.addEventListener('shown.bs.modal', function (event) {
                 //définit un timer à la fin duquel je ferme ma modale
                 setTimeout(() => {
                     myModalOk.hide();
                     CustomEventService.appelerEvenement('chargerPageTableauDeBord', "Coucou c'est la Connexion!");
                 }, 2000);
-            })
+            });
+
             myModalOk.show();
         }
 

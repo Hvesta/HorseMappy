@@ -23,13 +23,22 @@ Cette application utilisera une partie front en ES6 (utilisation de la librairie
 image::images/organigramme_horseMappy.png[]
 
 
+=== Architecture du front
+
+image::images/archi-HorseMappy.jpeg[]
+
+=== Modèle MVC
+
+image::images/MVC.jpeg[]
+
+
 === Design de l'application
 
 image::images/horseMappy.jpg[]
 
 * Typographies choisies : +
 ** Pour les titres : Nerko One (Google Fonts)
-** Pour le contenu : Patrick Hand (Google Fonts)
+** Pour le contenu : Lato (Google Fonts)
 ** Couleurs utilisées : +
 *** Mode classique : +
     - Bleu : #2F6FC4

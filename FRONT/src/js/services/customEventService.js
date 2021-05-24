@@ -35,6 +35,7 @@ const CustomEventService = function () {
         delete evenements[nomEvenement];
     }
 
+    // API du service
     return {
         inscrireEvenement: inscrireEvenement,
         appelerEvenement: appelerEvenement,
