@@ -2,6 +2,7 @@ import {vueInterfaceUtilisateur} from "../../vues/vue-interface-utilisateur";
 import {Carte} from "../../modeles/Carte";
 import {attacherEvenementsModeInterface} from "./choixModeTDB";
 import {animerElement} from "../../services/animationService";
+import {CustomEventService} from "../../services/customEventService";
 
 const racineContenu = document.getElementById('racine_contenu');
 
@@ -13,6 +14,12 @@ function TableauDeBordController() {
         // Elements
         // Bouton checkbox
         elements.btnCheckbox = document.querySelector('.form-check-input');
+
+        // Formulaires
+        elements.form = document.querySelector('.form');
+        elements.containerWorkouts = document.querySelector('.workouts');
+        elements.inputType = document.querySelector('.form__input--type');
+
 
         //Fonds de couleur
         elements.sidebarOptions = document.querySelector('.options');
@@ -44,14 +51,30 @@ function TableauDeBordController() {
         carte.afficher();
     }
 
+    const afficherFormulaireParcours = function () {
+            elements.form.classList.remove('hidden');
+    }
+
+    const inscrireLesEvenements = function() {
+        CustomEventService.inscrireEvenement('clicSurLaCarte', function (mapE) {
+            carte.setMapEvent(mapE);
+            afficherFormulaireParcours();
+        });
+    }
+
+    const animerLesElements = function() {
+        animerElement(elements.oiseau, 'slideInUp');
+        animerElement(elements.logo, 'bounceIn');
+    }
+
     this.afficherVue = function () {
         chargerCssTdb();
         chargerDOM();
         chargerReferencesDOM();
         chargerCarte();
         attacherEvenementsModeInterface(elements, carte);
-        animerElement(elements.oiseau, 'slideInUp');
-        animerElement(elements.logo, 'bounceIn');
+        inscrireLesEvenements();
+        animerLesElements();
     }
 }
 

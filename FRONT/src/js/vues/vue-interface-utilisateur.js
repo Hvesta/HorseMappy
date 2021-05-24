@@ -20,8 +20,9 @@ export const vueInterfaceUtilisateur = `
           <div class="form__row">
             <label class="form__label">Type</label>
             <select class="form__input form__input--type">
-              <option value="running">Running</option>
-              <option value="cycling">Cycling</option>
+              <option value="running">Pas</option>
+              <option value="cycling">Trot</option>
+              <option value="cycling">Galop</option>
             </select>
           </div>
           <div class="form__row">
@@ -51,7 +52,8 @@ export const vueInterfaceUtilisateur = `
           </div>
           <button class="form__btn">OK</button>
         </form>
-
+        
+        <!--
         <li class="workout workout--running" data-id="1234567890">
           <h2 class="workout__title">Running on April 14</h2>
           <div class="workout__details">
@@ -99,7 +101,9 @@ export const vueInterfaceUtilisateur = `
             <span class="workout__unit">m</span>
           </div>
         </li> 
+      -->  
       </ul>
+ 
       <img src="../images/bird-inter.svg" alt="Oiseau" class="oiseau" />
     </div>
 

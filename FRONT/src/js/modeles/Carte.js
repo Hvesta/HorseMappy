@@ -1,4 +1,18 @@
+import {CustomEventService} from "../services/customEventService";
+
 function Carte (mode) {
+    const parcours = [];
+    let mapLeaflet;
+    let mapEvent;
+    let tuiles;
+    let attribution;
+    let url;
+
+    const myIcon = L.icon({
+        iconUrl: '../images/logo.svg',
+        iconSize: [38, 95],
+        iconAnchor: [22, 94]
+    });
 
     const modesMapping = {
         normal: {
@@ -25,18 +39,42 @@ function Carte (mode) {
         const {latitude} = position.coords;
         const {longitude} = position.coords;
         const coords = [latitude, longitude];
-        let map = L.map('map').setView(coords, niveauZoomCarte);
-        console.log(this.url);
+        mapLeaflet = L.map('map').setView(coords, niveauZoomCarte);
+        choixTuiles();
+        attacherEvenementCarte();
+    };
 
-        this.tuiles = L.tileLayer(this.url, {
-            attribution: this.attribution
-        }).addTo(map);
+    const choixTuiles = () => {
+        tuiles = L.tileLayer(url, {
+            attribution: attribution
+        }).addTo(mapLeaflet);
+    }
 
-        L.marker([51.5, -0.09]).addTo(map)
-            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    const attacherEvenementCarte = () => {
+        mapLeaflet.on('click', function (mapE) {
+            CustomEventService.appelerEvenement('clicSurLaCarte', mapE);
+        });
+    }
+
+
+
+    //Rendu du marqueur
+    const marqueurParcours = (parcours) => {
+        L.marker([51.5, -0.09], {icon: myIcon}).addTo(mapLeaflet)
+            .bindPopup(L.popup({
+                    maxWidth: 250,
+                    minWidth: 100,
+                    autoClose: false,
+                    closeOnClick: false,
+                    className: `${parcours.type}-popup`,
+                })
+            )
+            .setPopupContent(`
+                 ${parcours.description}`)
             .openPopup();
     };
 
+    //Gestion d'erreur mode de la carte
     const modeCarteExiste = () => {
         this.error = false;
         if(!modesMapping[mode]){
@@ -47,29 +85,40 @@ function Carte (mode) {
         return true;
     }
 
-    if (modeCarteExiste(mode)){
-        this.url = modesMapping[mode].url;
-        this.attribution = modesMapping[mode].attribution;
+    if (modeCarteExiste(mode)) {
+        url = modesMapping[mode].url;
+        attribution = modesMapping[mode].attribution;
     }
 
     const afficher = function () {
         if (!this.error) {
-            // viderEmplacementCarte();
             recuperationPosition();
         }
     }
 
+    const getMapEvent = function () {
+        return mapEvent;
+    }
+
+    const setMapEvent = function (mapE) {
+        mapEvent = mapE;
+    }
+
+    // changement de carte au changement de mode
     const changerMode = function (mode) {
         if (modeCarteExiste(mode)){
-            this.url = modesMapping[mode].url;
-            this.attribution = modesMapping[mode].attribution;
-            this.tuiles.setUrl(this.url);
+            url = modesMapping[mode].url;
+            attribution = modesMapping[mode].attribution;
+            tuiles.setUrl(url);
         }
     };
 
+    //API de l'objet Carte
     return {
         afficher: afficher,
-        changerMode: changerMode
+        changerMode: changerMode,
+        setMapEvent: setMapEvent,
+        getMapEvent: getMapEvent
     }
 }
 
