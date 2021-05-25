@@ -1,20 +1,27 @@
 'use strict';
 
-const animerElement = (node, animation, prefix = 'animate__') =>
-    // We create a Promise and return it
-    new Promise((resolve, reject) => {
-        const animationName = `${prefix}${animation}`;
+const AnimationService = function () {
 
-        node.classList.add(`${prefix}animated`, animationName);
+    const animerElement = (node, animation, prefix = 'animate__') =>
+        // We create a Promise and return it
+        new Promise((resolve, reject) => {
+            const animationName = `${prefix}${animation}`;
 
-        // When the animation ends, we clean the classes and resolve the Promise
-        function handleAnimationEnd(event) {
-            event.stopPropagation();
-            node.classList.remove(`${prefix}animated`, animationName);
-            resolve('Animation ended');
-        }
+            node.classList.add(`${prefix}animated`, animationName);
 
-        node.addEventListener('animationend', handleAnimationEnd, {once: true});
-    });
+            // When the animation ends, we clean the classes and resolve the Promise
+            function handleAnimationEnd(event) {
+                event.stopPropagation();
+                node.classList.remove(`${prefix}animated`, animationName);
+                resolve('Animation ended');
+            }
 
-export {animerElement};
+            node.addEventListener('animationend', handleAnimationEnd, {once: true});
+        });
+
+    return {
+        animerElement: animerElement
+    }
+};
+
+export {AnimationService};

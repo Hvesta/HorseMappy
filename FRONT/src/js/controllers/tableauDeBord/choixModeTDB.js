@@ -1,10 +1,9 @@
 'use strict';
 
-import {Carte} from "../../modeles/Carte";
-import {animerElement} from "../../services/animationService";
+import {AnimationService} from "../../services/animationService";
 
 const attacherEvenementsModeInterface = (elements, carte) => {
-// Changement d'état mode "dark"
+
     const modeJour = () => {
         elements.sidebarOptions.style.backgroundColor = '#ff914d';
         elements.sidebarParcours.style.backgroundColor = '#2f6fc4';
@@ -16,11 +15,11 @@ const attacherEvenementsModeInterface = (elements, carte) => {
         carte.changerMode('normal');
     };
 
-
+// Changement d'état mode "dark"
     const modeDark = () => {
-        elements.sidebarOptions.style.backgroundColor = '#043474';
+        elements.sidebarOptions.style.backgroundColor = '#5994e1';
         elements.sidebarParcours.style.backgroundColor = '#043474';
-        elements.body.style.backgroundColor = '#5994e1';
+        elements.body.style.backgroundColor = '#043474';
         elements.oiseau.setAttribute("src", "../src/images/owl-inter.svg");
         elements.iconeMode.setAttribute("src", "../src/images/moon-blanc.svg");
         elements.param.setAttribute("src", "../src/images/engrenage-blanc.svg");
@@ -35,8 +34,8 @@ const attacherEvenementsModeInterface = (elements, carte) => {
         } else {
             modeJour();
         }
-        animerElement(elements.oiseau, 'slideInUp');
-        animerElement(elements.logo, 'bounceIn');
+        AnimationService.animerElement(elements.oiseau, 'slideInUp');
+        AnimationService.animerElement(elements.logo, 'bounceIn');
     };
 
     ///////////////////////

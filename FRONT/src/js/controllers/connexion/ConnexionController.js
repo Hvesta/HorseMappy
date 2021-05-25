@@ -1,5 +1,5 @@
 'use strict';
-import {animerElement} from "../../services/animationService";
+import {AnimationService} from "../../services/animationService";
 import {vueConnexion} from "../../vues/vue-connexion";
 import {vueModalePostConnexionOk} from "../../vues/vue-modale-post-connexion-ok";
 import {vueModalePostConnexionKo} from "../../vues/vue-modale-post-connexion-ko";
@@ -113,8 +113,8 @@ function ConnexionController(callbackChargerPage) {
     };
 
     const animerLesElements = function () {
-        animerElement(elements.titreAppli, 'bounceIn');
-        animerElement(elements.logo, 'bounceIn');
+        AnimationService.animerElement(elements.titreAppli, 'bounceIn');
+        AnimationService.animerElement(elements.logo, 'bounceIn');
     }
 
     this.afficherVue = function () {

@@ -1,6 +1,6 @@
 'use strict';
 
-import {animerElement} from "../../services/animationService";
+import {AnimationService} from "../../services/animationService";
 
 const attacherEvenementsModeConnexion = (elements) => {
 
@@ -40,8 +40,8 @@ const attacherEvenementsModeConnexion = (elements) => {
         } else {
             basculerModeJour();
         }
-        animerElement(elements.titreAppli, 'bounceIn');
-        animerElement(elements.logo, 'bounceIn');
+        AnimationService.animerElement(elements.titreAppli, 'bounceIn');
+        AnimationService.animerElement(elements.logo, 'bounceIn');
     };
 
     // Event handlers

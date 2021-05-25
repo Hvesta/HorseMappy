@@ -1,7 +1,7 @@
 import {vueInterfaceUtilisateur} from "../../vues/vue-interface-utilisateur";
 import {Carte} from "../../modeles/Carte";
 import {attacherEvenementsModeInterface} from "./choixModeTDB";
-import {animerElement} from "../../services/animationService";
+import {AnimationService} from "../../services/animationService";
 import {CustomEventService} from "../../services/customEventService";
 
 const racineContenu = document.getElementById('racine_contenu');
@@ -63,8 +63,8 @@ function TableauDeBordController() {
     }
 
     const animerLesElements = function() {
-        animerElement(elements.oiseau, 'slideInUp');
-        animerElement(elements.logo, 'bounceIn');
+        AnimationService.animerElement(elements.oiseau, 'slideInUp');
+        AnimationService.animerElement(elements.logo, 'bounceIn');
     }
 
     this.afficherVue = function () {
