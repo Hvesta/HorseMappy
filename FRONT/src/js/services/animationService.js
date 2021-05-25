@@ -22,6 +22,6 @@ const AnimationService = function () {
     return {
         animerElement: animerElement
     }
-};
+}();
 
 export {AnimationService};

@@ -20,9 +20,9 @@ export const vueInterfaceUtilisateur = `
           <div class="form__row">
             <label class="form__label">Type</label>
             <select class="form__input form__input--type">
-              <option value="running">Pas</option>
-              <option value="cycling">Trot</option>
-              <option value="cycling">Galop</option>
+              <option value="pas">Pas</option>
+              <option value="trot">Trot</option>
+              <option value="galop">Galop</option>
             </select>
           </div>
           <div class="form__row">
@@ -30,19 +30,20 @@ export const vueInterfaceUtilisateur = `
             <input class="form__input form__input--distance" placeholder="km" />
           </div>
           <div class="form__row">
-            <label class="form__label">Duration</label>
+            <label class="form__label">Durée</label>
             <input
               class="form__input form__input--duration"
               placeholder="min"
             />
           </div>
           <div class="form__row">
-            <label class="form__label">Cadence</label>
+            <label class="form__label">Note</label>
             <input
-              class="form__input form__input--cadence"
-              placeholder="step/min"
+              class="form__input form__input--note"
+              placeholder="/10"
             />
           </div>
+          <!--
           <div class="form__row form__row--hidden">
             <label class="form__label">Elev Gain</label>
             <input
@@ -50,6 +51,7 @@ export const vueInterfaceUtilisateur = `
               placeholder="meters"
             />
           </div>
+          -->
           <button class="form__btn">OK</button>
         </form>
         

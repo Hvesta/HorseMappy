@@ -1,9 +1,10 @@
 'use strict';
 
 import {AnimationService} from "../../services/animationService";
+import {CustomEventService} from "../../services/customEventService";
 
 const attacherEvenementsModeInterface = (elements, carte) => {
-
+// Changement d'état mode "dark" / mode "jour"
     const modeJour = () => {
         elements.sidebarOptions.style.backgroundColor = '#ff914d';
         elements.sidebarParcours.style.backgroundColor = '#2f6fc4';
@@ -15,7 +16,6 @@ const attacherEvenementsModeInterface = (elements, carte) => {
         carte.changerMode('normal');
     };
 
-// Changement d'état mode "dark"
     const modeDark = () => {
         elements.sidebarOptions.style.backgroundColor = '#5994e1';
         elements.sidebarParcours.style.backgroundColor = '#043474';
@@ -26,7 +26,6 @@ const attacherEvenementsModeInterface = (elements, carte) => {
 
         carte.changerMode('dark');
     };
-
 
     const toggleMode = () => {
         if (elements.btnCheckbox.checked) {
@@ -41,6 +40,10 @@ const attacherEvenementsModeInterface = (elements, carte) => {
     ///////////////////////
     // Event handlers
     elements.btnCheckbox.addEventListener('change', toggleMode);
+    elements.form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        CustomEventService.appelerEvenement('submitFormulaire');
+    })
 
 };
 

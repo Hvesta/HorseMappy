@@ -1,7 +1,7 @@
 import {CustomEventService} from "../services/customEventService";
 
 function Carte (mode) {
-    const parcours = [];
+
     let mapLeaflet;
     let mapEvent;
     let tuiles;
@@ -9,7 +9,7 @@ function Carte (mode) {
     let url;
 
     const myIcon = L.icon({
-        iconUrl: '../images/logo.svg',
+        iconUrl: './src/images/logo.svg',
         iconSize: [38, 95],
         iconAnchor: [22, 94]
     });
@@ -57,10 +57,12 @@ function Carte (mode) {
     }
 
 
+    //Rendu du marqueur avec sa pop up sur la carte
+    const afficherMarqueur = (parcours) => {
+        const coords = parcours.coords;
+        const {lat, lng} = coords;
 
-    //Rendu du marqueur
-    const marqueurParcours = (parcours) => {
-        L.marker([51.5, -0.09], {icon: myIcon}).addTo(mapLeaflet)
+        L.marker([lat, lng], {icon: myIcon}).addTo(mapLeaflet)
             .bindPopup(L.popup({
                     maxWidth: 250,
                     minWidth: 100,
@@ -118,7 +120,8 @@ function Carte (mode) {
         afficher: afficher,
         changerMode: changerMode,
         setMapEvent: setMapEvent,
-        getMapEvent: getMapEvent
+        getMapEvent: getMapEvent,
+        afficherMarqueur: afficherMarqueur
     }
 }
 
