@@ -25,13 +25,16 @@ function Carte (mode) {
         },
     };
 
-    const recuperationPosition = () => {
-        if(navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(recuperationCarte.bind(this), function() {
-                alert('Récupération de votre position impossible !');
-            })
-        }
-    };
+// Remplacement de cette fonction par une Promesse (chapitre => "promisifying geolocalisation API")
+//     const recuperationPosition = () => {
+    //     if(navigator.geolocation) {
+    //         navigator.geolocation.getCurrentPosition(recuperationCarte.bind(this), function() {
+    //             alert('Récupération de votre position impossible !');
+    //         })
+    //     }
+    // };
+
+
 
     const recuperationCarte = (position) => {
         let niveauZoomCarte = 13;
@@ -92,9 +95,21 @@ function Carte (mode) {
         attribution = modesMapping[mode].attribution;
     }
 
+    const recuperationGeolocalisation = () => {
+        if(navigator.geolocation) {
+            return new Promise(function(resolve, reject) {
+                navigator.geolocation.getCurrentPosition(resolve, reject);
+            });
+        }
+    };
+
     const afficher = function () {
         if (!this.error) {
-            recuperationPosition();
+              recuperationGeolocalisation()
+                .then(position => {
+                    recuperationCarte(position);
+                })
+                .catch(err => alert(`Problème détecté : ${err}`));
         }
     }
 

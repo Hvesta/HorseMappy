@@ -6,6 +6,5 @@ const app = new App();
 app.demarrer();
 
 
-const parcours = new Parcours();
-console.log(parcours);
+//const parcours = new Parcours();
 
