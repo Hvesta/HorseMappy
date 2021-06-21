@@ -1,4 +1,5 @@
 import {CustomEventService} from "../services/customEventService";
+import {parcoursService} from "../services/parcoursService";
 
 function Carte (mode) {
 
@@ -10,8 +11,9 @@ function Carte (mode) {
 
     const myIcon = L.icon({
         iconUrl: './src/images/logo.svg',
-        iconSize: [38, 95],
-        iconAnchor: [22, 94]
+        iconSize: [50, 95],
+        iconAnchor: [35, 94],
+        popupAnchor: [-3, -76]
     });
 
     const modesMapping = {
@@ -55,8 +57,10 @@ function Carte (mode) {
 
     const attacherEvenementCarte = () => {
         mapLeaflet.on('click', function (mapE) {
-            CustomEventService.appelerEvenement('clicSurLaCarte', mapE);
+            CustomEventService.appelerEvenement('afficherFormulaireParcours', mapE);
         });
+
+        CustomEventService.inscrireEvenement("centrerSurMarqueur", centrerSurMarqueur);
     }
 
 
@@ -67,8 +71,8 @@ function Carte (mode) {
 
         L.marker([lat, lng], {icon: myIcon}).addTo(mapLeaflet)
             .bindPopup(L.popup({
-                    maxWidth: 250,
-                    minWidth: 100,
+                    maxWidth: 300,
+                    minWidth: 200,
                     autoClose: false,
                     closeOnClick: false,
                     className: `${parcours.type}-popup`,
@@ -78,6 +82,16 @@ function Carte (mode) {
                  ${parcours.description}`)
             .openPopup();
     };
+
+
+    const centrerSurMarqueur = function(coords) {
+        mapLeaflet.setView(coords, 13, {
+            animate: true,
+            pan: {
+                duration: 1
+            }
+        });
+    }
 
     //Gestion d'erreur mode de la carte
     const modeCarteExiste = () => {

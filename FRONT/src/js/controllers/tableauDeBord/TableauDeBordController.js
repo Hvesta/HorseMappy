@@ -77,6 +77,8 @@ function TableauDeBordController() {
         resetFormulaire();
     }
 
+
+
     const afficherParcoursDansListe = function (parcours) {
         let html = `
         <li class="workout workout--${parcours.type}" data-id="${parcours.id}">
@@ -111,13 +113,30 @@ function TableauDeBordController() {
         const allPositive = (...inputs) => inputs.every(inp => inp > 0);
     }
 
+
+
+    const centrerSurParcours = function (e) {
+        const parcoursEl = e.target.closest('.workout');
+        if(!parcoursEl) {
+            return;
+        }
+        const idParcours = parcoursEl.dataset.id;
+        const parcoursChoisi = parcoursService.recupererUnParcours(idParcours);
+
+
+        CustomEventService.appelerEvenement("centrerSurMarqueur", parcoursChoisi.coords);
+    }
+
     const inscrireLesEvenements = function() {
-        CustomEventService.inscrireEvenement('clicSurLaCarte', function (mapE) {
+        CustomEventService.inscrireEvenement('afficherFormulaireParcours', function (mapE) {
             carte.setMapEvent(mapE);
             afficherFormulaireParcours();
         });
 
         CustomEventService.inscrireEvenement('submitFormulaire', soumissionFormulaire);
+
+        //  Au clic sur un parcours le focus est mis sur le marqueur correspondant sur la carte
+        elements.containerWorkouts.addEventListener('click', centrerSurParcours);
     }
 
     const animerLesElements = function() {

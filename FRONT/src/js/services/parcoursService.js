@@ -13,6 +13,7 @@ const parcoursService = function() {
 
      const recupererUnParcours = function(id) {
          //find dans le tableau de parcours
+         return parcoursRealises.find(parcours => parcours.id === id);
      }
 
      const creerUnParcours = function(coords, distance, duree, type) {
